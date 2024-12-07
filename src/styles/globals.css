@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom CSS Variables */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -14,8 +15,37 @@
   }
 }
 
+/* Global Body Styles */
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  font-family: 'Inter', sans-serif; /* Tailwind's default font family */
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--background);
+  border-bottom: 1px solid var(--foreground);
+}
+
+nav a {
+  color: #0070f3; /* Tailwind's blue color */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #0369a1; /* Slightly darker blue for hover state */
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }
